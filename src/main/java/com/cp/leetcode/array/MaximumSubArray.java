@@ -17,6 +17,7 @@ public class MaximumSubArray {
     public static void main(String[] ar) {
         MaximumSubArray maximumSubArray = new MaximumSubArray();
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+
         List<List<Integer>> allSubArrays = maximumSubArray.findAllSubArray(nums);
         System.out.println(allSubArrays);
 
@@ -74,5 +75,21 @@ public class MaximumSubArray {
             }
         }
         return maxSubArraySum;
+    }
+
+    public int maxSubArrayWithBetterApproach(int[] nums) {
+//        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+
+        //Merge Sort - https://www.youtube.com/watch?v=JSceec-wEyw
+        //https://he-s3.s3.amazonaws.com/media/uploads/37deb43.jpg
+        if(nums.length == 1) {
+            return nums[0];
+        }
+        int maxSumEndingHere = 0;
+        int maxSumSoFar = 0;
+        for (int i = 0; i < nums.length; i++) {
+
+        }
+        return -1;
     }
 }
