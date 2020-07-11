@@ -27,7 +27,7 @@ public class BalancedString {
     }
 
     public int balancedStringSplit(String s) {
-        // I looked at pattern carefully and realized strng could start from either L or R
+        // I looked at pattern carefully and realized string could start from either L or R
         // we consider one split or balanced when count of L and count of R matches
         // with this I defined two pointers rCount and lCount which will increase each time they encountered
         // if there is match of rCount and lCount we can consider it as one match and increase maxSplit counter
