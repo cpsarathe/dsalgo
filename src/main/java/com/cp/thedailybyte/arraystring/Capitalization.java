@@ -1,4 +1,4 @@
-package com.cp.thedailybyte;
+package com.cp.thedailybyte.arraystring;
 /**
  * Given a string, return whether or not it uses capitalization correctly.
  * A string correctly uses capitalization if all letters are capitalized, no letters are capitalized,

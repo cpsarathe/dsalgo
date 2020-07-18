@@ -1,4 +1,4 @@
-package com.cp.thedailybyte;
+package com.cp.thedailybyte.arraystring;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.cp.thedailybyte;
+package com.cp.thedailybyte.arraystring;
 
 /**
  * Note: a palindrome is a sequence of characters that reads the same forwards and backwards.

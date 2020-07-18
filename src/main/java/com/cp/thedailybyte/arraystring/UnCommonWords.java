@@ -1,17 +1,14 @@
-package com.cp.thedailybyte;
+package com.cp.thedailybyte.arraystring;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class UnCommonWords {
 
     public static void main(String[] ar) {
         UnCommonWords obj = new UnCommonWords();
-        boolean tc1 = Arrays.equals(obj.uncommonFromSentences("this apple is sweet", "this apple is sour") , new String[]{"sweet","sour"});
-        boolean tc2 = Arrays.equals(obj.uncommonFromSentences("apple apple", "banana") , new String[]{"banana"});
-        boolean tc3 = Arrays.equals(obj.uncommonFromSentences("the quick", "brown fix") , new String[]{"the","quick","brown","fix"});
+        boolean tc1 = Arrays.equals(obj.uncommonFromSentencesBetter("this apple is sweet", "this apple is sour"), new String[]{"sweet", "sour"});
+        boolean tc2 = Arrays.equals(obj.uncommonFromSentencesBetter("apple apple", "banana"), new String[]{"banana"});
+        boolean tc3 = Arrays.equals(obj.uncommonFromSentencesBetter("the quick", "brown fix"), new String[]{"the", "quick", "brown", "fix"});
 
         System.out.println(tc1);
         System.out.println(tc2);
@@ -64,5 +61,42 @@ public class UnCommonWords {
         String[] strings = list.stream().toArray(String[]::new);
 
         return strings;
+    }
+
+    public String[] uncommonFromSentencesBetter(String A, String B) {
+        String[] aArr = A.split(" ");
+        String[] bArr = B.split(" ");
+        HashMap<String, Integer> countWordMap = new HashMap();
+        int i = 0, j = 0;
+        while (i < aArr.length || j < bArr.length) {
+            if (i < aArr.length) {
+                setWordCountMap(aArr[i],countWordMap);
+            }
+            if (j < bArr.length) {
+                setWordCountMap(bArr[i],countWordMap);
+            }
+            i++;
+            j++;
+        }
+
+        List<String> list = new ArrayList();
+        for (Map.Entry<String, Integer> entry : countWordMap.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            if (value == 1) {
+                list.add(key);
+            }
+        }
+        String[] strings = list.stream().toArray(String[]::new);
+
+        return strings;
+    }
+
+    private void setWordCountMap(String word , HashMap<String, Integer> countWordMap){
+        if (countWordMap.containsKey(word)) {
+            countWordMap.put(word, -1);
+        } else {
+            countWordMap.put(word, 1);
+        }
     }
 }

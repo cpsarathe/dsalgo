@@ -1,6 +1,4 @@
-package com.cp.thedailybyte;
-
-import com.cp.algos.MergeSort;
+package com.cp.thedailybyte.arraystring;
 
 /**
  * This question is asked by Google. Given a string, reverse all of its characters and return the resulting string.

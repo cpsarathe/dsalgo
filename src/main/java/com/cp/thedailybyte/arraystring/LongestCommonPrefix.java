@@ -1,6 +1,4 @@
-package com.cp.thedailybyte;
-
-import java.util.Arrays;
+package com.cp.thedailybyte.arraystring;
 
 /**
  * Given an array of strings, return the longest common prefix that is shared amongst all strings.

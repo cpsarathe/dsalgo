@@ -1,8 +1,6 @@
-package com.cp.thedailybyte;
+package com.cp.thedailybyte.arraystring;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  *
